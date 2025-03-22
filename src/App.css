@@ -1,0 +1,163 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b262c, #0f4c75);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.6em 0.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 1rem 9rem;
+  width: 125px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* USER CARD STYLES */
+.user-card {
+  width: 300px;
+  background: linear-gradient(135deg, #0f4c75, #3282b8);
+  color: #fff;
+  padding: 28px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.user-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.user-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #bbe1fa;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease;
+}
+
+.user-card:hover .user-img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+h3 {
+  margin: 10px 0 5px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.email {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.user-card .btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #bbe1fa;
+  color: #0f4c75;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+.user-card .btn:hover {
+  background: #ffffff;
+  color: #0f4c75;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.user-card::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 20%, transparent 60%);
+  top: -50%;
+  left: -50%;
+  transform: rotate(45deg);
+  animation: shine 5s linear infinite;
+  z-index: 0;
+}
+
+.user-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0% { transform: rotate(45deg) translate(-50%, -50%) }
+  100% { transform: rotate(405deg) translate(-50%, -50%) }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
