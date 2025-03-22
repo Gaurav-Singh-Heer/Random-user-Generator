@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {getRandomUser } from '../components/api'
-import UserCard from '../components/UserCard';
+import UserCard from '../components/userCard';
 import './App.css'
 
 function App() {
